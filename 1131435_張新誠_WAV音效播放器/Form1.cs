@@ -37,6 +37,18 @@ namespace _1131435_張新誠_WAV音效播放器
             player1.SoundLocation = txtPath.Text; // 指定音效所在路徑檔名
             player1.Load(); // 載入音效檔資料
             player1.Play();
+            frmWAVPlayer.ActiveForm.Size = new Size(537, 501);
+            listeningGIF.Visible = true;
+            grPath.ForeColor = Color.White;
+            grPath.BackColor = Color.Navy;
+            grpButton.ForeColor = Color.White;
+            grpButton.BackColor = Color.Navy;
+            frmWAVPlayer.ActiveForm.BackColor = Color.Navy;
+            btnBrowse.BackColor = Color.Black;
+            btnEnd.BackColor = Color.Black;
+            btnLoop.BackColor = Color.Black;
+            btnPlay.BackColor = Color.Black;
+            btnStop.BackColor = Color.Black;
         }
 
         private void btnLoop_Click(object sender, EventArgs e)
@@ -44,6 +56,18 @@ namespace _1131435_張新誠_WAV音效播放器
             // 使用完整檔名建立物件
             SoundPlayer player2 = new SoundPlayer(txtPath.Text);
             player2.PlayLooping();
+            frmWAVPlayer.ActiveForm.Size = new Size(537, 501);
+            listeningGIF.Visible = true;
+            grPath.ForeColor = Color.White;
+            grPath.BackColor = Color.Navy;
+            grpButton.ForeColor = Color.White;
+            grpButton.BackColor = Color.Navy;
+            frmWAVPlayer.ActiveForm.BackColor = Color.Navy;
+            btnBrowse.BackColor = Color.Black;
+            btnEnd.BackColor = Color.Black;
+            btnLoop.BackColor = Color.Black;
+            btnPlay.BackColor = Color.Black;
+            btnStop.BackColor = Color.Black;
         }
         private void btnStop_Click(object sender, EventArgs e)
         {
@@ -52,6 +76,18 @@ namespace _1131435_張新誠_WAV音效播放器
             SoundPlayer player3 = new SoundPlayer(fsWAV);
             player3.Stop(); // 停止播放
             fsWAV.Close(); // 關閉串流
+            frmWAVPlayer.ActiveForm.Size = new Size(400, 206);
+            listeningGIF.Visible = false;
+            grPath.ForeColor = Color.Black;
+            grPath.BackColor = Color.WhiteSmoke;
+            grpButton.ForeColor = Color.Black;
+            grpButton.BackColor = Color.WhiteSmoke;
+            frmWAVPlayer.ActiveForm.BackColor = Color.WhiteSmoke;
+            btnBrowse.BackColor = Color.WhiteSmoke;
+            btnEnd.BackColor = Color.WhiteSmoke;
+            btnLoop.BackColor = Color.WhiteSmoke;
+            btnPlay.BackColor = Color.WhiteSmoke;
+            btnStop.BackColor = Color.WhiteSmoke;
         }
 
         private void btnEnd_Click(object sender, EventArgs e)
@@ -66,6 +102,11 @@ if (result == DialogResult.No)
             {
                 e.Cancel = true; // 取消關閉
             }
+        }
+
+        private void frmWAVPlayer_Load(object sender, EventArgs e)
+        {
+            Size = new Size(400, 206);
         }
     }
 }
